@@ -10,4 +10,4 @@ echo
 export RESTIC_PASSWORD
 
 echo "IMPORTANT: your data will be deleted if backup wants to overwrite it! Press ctrl+c and do not enter password if unsure!"
-sudo restic -r "$SCRIPT_DIR/restic" restore latest --target /
+sudo --preserve-env restic -r "$SCRIPT_DIR/restic" restore latest --target /
